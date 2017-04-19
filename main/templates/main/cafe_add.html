@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div ng-controller="cafeAdd">
+    <input type="text" ng-model="flag">
+    <form ng-submit="addCafe()">
+        <input ng-model="name" type="text" placeholder="카페 이름을 입력하세요.">
+        <textarea ng-model="desc" name="desc" id="" cols="30" rows="10"></textarea>
+        <input type="submit" value="카페등록">
+    </form>
+</div>
+{% endblock %}
