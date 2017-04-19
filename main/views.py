@@ -28,9 +28,20 @@ def api_cafe(request):
         serializer = CafeSerializer(cafes, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     elif request.method == 'POST':
-        
-    else:
+        serializer = CafeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    #
+    #     title = request.POST.name
+    #     desc = request.POST.desc
+    #     # cafe = Cafe.objects.create(title=title, desc=desc)
 
+
+    else:
+        pass
     # elif request.method == '':
     #     flag = request.
 
