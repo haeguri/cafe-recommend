@@ -1,8 +1,8 @@
-angular.module('cafealone.controller', [])
-    .controller('home', function($scope, $http) {
+angular.module('cafealone.controller')
+    .controller('homeCtrl', function($scope, $http) {
         $http({
             method: 'GET',
-            url: '/api/cafes'
+            url: '/api/cafes/'
         }).then(
             function success(response) {
                 console.log(response.data);

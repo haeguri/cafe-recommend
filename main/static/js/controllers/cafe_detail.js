@@ -1,5 +1,5 @@
 angular.module('cafealone.controller')
-    .controller('cafeDetail', function($scope, $http) {
+    .controller('cafeDetailCtrl', function($scope, $http) {
         var cafeId = location.pathname.replace('/cafe/', '');
         console.log(cafeId);
 

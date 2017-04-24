@@ -1,6 +1,7 @@
-from django.conf.urls import include, url
+from django.conf import settings
+from django.conf.urls import include, url, static
 from django.contrib import admin
-from main.views import api_cafe, api_cafe_detail
+from main.views import api_cafe, api_cafe_detail, home
 
 urlpatterns = [
     # Examples:
@@ -13,5 +14,7 @@ urlpatterns = [
     url(r'^api/cafes/$', api_cafe),
     url(r'^api/cafes/(?P<pk>\d+)$', api_cafe_detail),
 
-    url(r'^', include('main.urls')),
+    # url(r'^', include('main.urls'))
+    url(r'^$', home)
 ]
+# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

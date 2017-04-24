@@ -8,18 +8,7 @@ from .serializers import CafeSerializer
 from .models import Cafe
 
 def home(request):
-    # return HttpResponse('Hello!')
-    return render(request, template_name='main/home.html')
-    # render_to_response(template_name='main/home.html')
-    pass
-
-def cafe_detail(request, pk):
-    return render(request, template_name='main/cafe_detail.html')
-
-def cafe_add(request):
-    return render(request, template_name='main/cafe_add.html')
-
-
+    return render(request, template_name='main/base.html')
 
 @api_view(['GET', 'POST'])
 def api_cafe(request):

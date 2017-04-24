@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="{% static 'angular/angular.js' %}"></script>
+    <script src="{% static 'angular-route/angular-route.js' %}"></script>
 </head>
-<body ng-app="cafealone">
-{% block content %}
-{% endblock %}
+<body ng-app="cafealone" ng-controller="rootCtrl">
+<base href="/">
+<nav ng-controller="navbarCtrl">
+    <h3>Navigation</h3>
+    <ul>
+        <li>Home Page</li>
+        <li>About</li>
+    </ul>
+</nav>
+<div ng-view></div>
 <script src="{% static 'js/app.js'%}"></script>
+<script src="{% static 'js/controllers/root.js' %}"></script>
+<script src="{% static 'js/controllers/navbar.js' %}"></script>
 <script src="{% static 'js/controllers/home.js' %}"></script>
-<script src="{% static 'js/controllers/cafeAdd.js' %}"></script>
-<script src="{% static 'js/controllers/cafeDetail.js' %}"></script>
+<script src="{% static 'js/controllers/cafe_add.js' %}"></script>
+<script src="{% static 'js/controllers/cafe_detail.js' %}"></script>
 </body>
 </html>

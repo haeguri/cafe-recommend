@@ -1,6 +1,5 @@
 angular.module('cafealone.controller')
-    .controller('cafeAdd', function($scope, $http) {
-
+    .controller('cafeAddCtrl', function($scope, $http) {
         console.log('cafe add controller');
         $scope.addCafe = function() {
             // console.log($scope.name, $scope.desc);
