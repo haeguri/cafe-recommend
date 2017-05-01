@@ -14,7 +14,5 @@ urlpatterns = [
     url(r'^api/cafes/$', api_cafe),
     url(r'^api/cafes/(?P<pk>\d+)$', api_cafe_detail),
 
-    # url(r'^', include('main.urls'))
-    url(r'^$', home)
+    url(r'^.*$', home)
 ]
-# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
